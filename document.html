@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+  <head>
+    <title>OceanxCMS,为您的网站私人订制</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Bootstrap -->
+    <link href="Public/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="Public/css/index.css" rel="stylesheet" media="screen">
+    <link href="Public/css/document.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+        <div class="">
+          <h1><a href="/">
+            <img src="http://www.yonglang.co/img/logo.png"/>
+          </a></h1>
+          <nav class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="container">
+              <a class="navbar-brand" href="#">OceanxCMS</a>
+              <ul class="nav navbar-nav">
+                <li><a href="/">首页</a></li>
+                <li><a href="#">关于</a></li>
+                <li class="active"><a href="document.html">文档</a></li>
+                <li><a href="#">下载</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="row">
+          <!-- document start -->
+          <div class="col-md-9">
+          <div lang="v2" style="line-height:1.6;"><div style="line-height: 1.6; font-family: Helvetica Neue, Arial, Hiragino Sans GB, STHeiti, Microsoft YaHei, WenQuanYi Micro Hei, SimSun, Song, sans-serif;"><h1 style="font-size: 36px; margin: 0.67em 0; font-family: inherit; font-weight: bold; line-height: 1.1; color: inherit; margin-top: 0px; margin-bottom: 20px;">OceanxCMS模板标签手册</h1>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+<div id="summary">
+<h3 style="font-family: inherit; font-weight: bold; line-height: 1.1; color: inherit; margin-top: 30px; margin-bottom: 20px; font-size: 24px;">标签简介</h3>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;">OceanxCMS标签</strong>是一套完整的静态化标签，极大地降低您的网站负载，提高您的网站的搜索排名。另外，它还是一套简洁易学的标签语言，即使您不懂后端复杂的代码逻辑，您也可以写出个性化的页面，内容页、栏目页、首页、区块通通搞定。即使您的网站已经沉淀了很多的数据，也只需要简单的数据迁移，而后一键批量生成静态化页面。</p>
+</div>
+<div id="details">
+<h3 style="font-family: inherit; font-weight: bold; line-height: 1.1; color: inherit; margin-top: 30px; margin-bottom: 20px; font-size: 24px;">标签详解</h3>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">标签的主要使用场景有三种，分别为<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">内容模板</code>、<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">栏目模板</code>、<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">公共模板</code>。</p></div>
+<!-- 公用模板start -->
+<div id="tag-public">
+<h4 style="font-family: inherit; font-weight: bold; line-height: 1.1; color: inherit; margin-top: 25px; margin-bottom: 15px; font-size: 18px;">公用模板</h4>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;" id="tag-public-global"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">公用全局标签</code></strong>：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">{site.字段名}</code>，全局站点信息，可以在内容页、栏目页、首页等各种页面使用</p>
+<table style="border-collapse: collapse; border-spacing: 0; margin-bottom: 20px;">
+<thead style="margin-top: 0px;">
+<tr style="margin-top: 0px;">
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;">标签名</th>
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">字段</th>
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">字段含义</th>
+</tr>
+</thead>
+<tbody>
+<tr style="margin-top: 0px;">
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{site.siteid}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">siteid</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">站点ID</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{site.name}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">name</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">站点名</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{site.domain}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">domain</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">域名</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{site.site_title}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">site_title</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">站点标题</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{site.site_type}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">site_type</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">站点类型</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{site.keywords}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">keywords</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">站点关键字</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{site.description}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">description</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">站点描述</td>
+</tr>
+</tbody>
+</table>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+<div id="tag-public-include">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">引入文件标签</code></strong>：引入头部或尾部等公共文件</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:include</span> <span style="color: #F92672;">file</span>=<span style="color: #a6e22e;">&quot;文件路径&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:include</span>&gt;</span>
+</code></pre>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">file路径的规则：</p>
+<ul style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;">以<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">~/</code>或<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">./</code>开头,表示站点根目录，如：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">file='~/templates/G_最新宝宝内容头部.html'</code>,表示主站点根目录下面的<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">templates</code>文件夹下面的<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">G_最新宝宝内容头部.html</code>文件。</li>
+<li style="line-height: 1.6;">不以<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">./</code>或<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">~/</code>等开头的路径，将转换成当前模板文件夹下的相对路径，如：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">file=include/header.html</code>,表示当前模板目录下的<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">include</code>目录下的<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">header.html</code>文件。</li>
+</ul>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-public-location">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">导航条标签</code></strong>：生成导航条，如：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">首页 &gt; 一级栏目 &gt; 二级栏目</code></p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:location</span> <span style="color: #F92672;">firstClass</span>=<span style="color: #a6e22e;">&quot;first&quot;</span> <span style="color: #F92672;">lastClass</span>=<span style="color: #a6e22e;">&quot;last&quot;</span> <span style="color: #F92672;">separator</span>=<span style="color: #a6e22e;">&quot;&gt;&quot;</span> <span style="color: #F92672;">target</span>=<span style="color: #a6e22e;">&quot;_blank&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:location</span>&gt;</span>
+</code></pre>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">属性：</p>
+<ul style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;"><strong style="font-weight: bold; margin-top: 0px;">firstClass</strong>：第一个a标签的样式,默认为 first</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">lastlass</strong>：最后一个a标签的样式,默认为 last</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">separator</strong>：a标签之间的分隔符,默认为 &gt;</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">target</strong>：a标签的target属性，默认为 _blank</li>
+</ul>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-public-navigation">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">&quot;上一篇，下一篇&quot;标签</code></strong>：</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:navigation</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">tipText</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">emptyText</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">class</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">target</span>=<span style="color: #a6e22e;">&quot;&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:navigation</span>&gt;</span>
+</code></pre>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">属性：</p>
+<ul style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;"><strong style="font-weight: bold; margin-top: 0px;">type</strong>：<ul style="margin-top: 0; margin-bottom: 0; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;">previouscontent 上一篇文章</li>
+<li style="line-height: 1.6;">nextcontent 下一篇文章</li>
+<li style="line-height: 1.6;">previouschannel 上一个栏目</li>
+<li style="line-height: 1.6;">nextchannel 下一个栏目</li>
+</ul>
+</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">tipText</strong>：上下篇链接前面的描述文字，如：下一篇：<a href="http://#" style="background: transparent;" target="_blank">下一篇主标题</a></li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">emptyText</strong>：当前文章（栏目）为第一篇（个）或最后一篇（个）时，没有上一篇或下一篇时显示的默认文字，如：“空”</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">class</strong>：样式</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">target</strong>：打开方式，默认为“_blank”</li>
+</ul>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-public-block">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">区块标签</code></strong>：通过CMS后台设置区块，在模板中引入相应的区块</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:block</span> <span style="color: #F92672;">file</span>=<span style="color: #a6e22e;">&quot;区块名.html&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:block</span>&gt;</span>
+</code></pre>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-public-adv">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">广告标签</code></strong>：引入js广告文件或引入后台CMS添加的广告代码块</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:ad</span> <span style="color: #F92672;">adName</span>=<span style="color: #a6e22e;">&quot;名称&quot;</span> <span style="color: #F92672;">source</span>=<span style="color: #a6e22e;">&quot;db|file&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:ad</span>&gt;</span>
+</code></pre>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">属性：</p>
+<ul style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;"><strong style="font-weight: bold; margin-top: 0px;">adName</strong>：后台添加的广告名或引入的js文件名（不包含.js后缀）</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">source</strong>：广告来源(默认来自db)<ul style="margin-top: 0; margin-bottom: 0; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;">db：来源于后台CMS添加</li>
+<li style="line-height: 1.6;">file：来自文件（路径：站点目录/ads/广告名.js，如果后台未定义站点目录，则路径为：/ads/广告名.js）</li>
+</ul>
+</li>
+</ul>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-public-image">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">图片标签</code></strong>：可以对图片的路径src做进一步的处理。</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:image</span> <span style="color: #F92672;">src</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">width</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">height</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">alt</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">class</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">title</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">channelname</span>=<span style="color: #a6e22e;">&quot;&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:image</span>&gt;</span>
+</code></pre>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">属性：</p>
+<ul style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;"><strong style="font-weight: bold; margin-top: 0px;">src</strong>：有src属性则使用给定的src</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">width</strong>：图片的宽度</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">height</strong>：图片的高度</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">alt</strong>：图片的alt属性</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">class</strong>：图片的样式</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">title</strong>：图片的title属性</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">channelname</strong>：指定的栏目的图片路径</li>
+</ul>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-public-a">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">A标签</code></strong>：A标签存在逻辑上的bug，需要修复</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:a</span> <span style="color: #F92672;">href</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">title</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">target</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">class</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">style</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">channelname</span>=<span style="color: #a6e22e;">&quot;&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:a</span>&gt;</span>
+</code></pre>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">属性：</p>
+<ul style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;"><strong style="font-weight: bold; margin-top: 0px;">channelname</strong>：栏目名称，可以指定栏目的信息作为a标签的信息[选填]</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">target</strong>：打开方式</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">class</strong>：样式</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">style</strong>：行内样式</li>
+</ul>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-public-contents">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">文章列表标签</code></strong>：查询一个文章列表，可以嵌套<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:if&gt;</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:a&gt;</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:content&gt;</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:image&gt;</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:count&gt;</code>标签,如果不需要对查询结果进行进一步的处理，推荐直接使用<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">{Content.字段名}</code>局部短标签，字段名可参考<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">内容页全局短标签</code>，否则，推荐使用<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:content&gt;</code>标签进行进一步处理。</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:contents</span> <span style="color: #F92672;">limit</span>=<span style="color: #a6e22e;">&quot;5&quot;</span> <span style="color: #F92672;">order</span>=<span style="color: #a6e22e;">&quot;updatetime desc&quot;</span> <span style="color: #F92672;">scope</span>=<span style="color: #a6e22e;">&quot;all&quot;</span> <span style="color: #F92672;">istop</span>=<span style="color: #a6e22e;">&quot;true&quot;</span> <span style="color: #F92672;">where</span>=<span style="color: #a6e22e;">&quot;......&quot;</span>&gt;</span>
+<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:contents</span>&gt;</span>
+</code></pre>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">属性：</p>
+<ul style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;"><strong style="font-weight: bold; margin-top: 0px;">limit</strong>：数字，列表中最多几篇文章</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">startnum</strong>：数字，指定条件的第（n-1）条为起始位置</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">order</strong>：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">字段名 desc|asc</code>（默认为按updatetime倒叙排列）</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">channelname</strong>：栏目名，指定栏目</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">scope</strong>：查询的范围，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">all</code> ，包括子栏目</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">groupchannel</strong>：分组名，指定栏目分组</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">groupchannelnot</strong>：分组名，指定栏目不属于此组</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">groupcontent</strong>：分组名，指定文章分组</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">groupcontentnot</strong>：分组名，指定文章不属于此组</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">where</strong>：标准的sql语句的where条件，适用于较为复杂的查询</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">join</strong>：标准的sql语句的join，适用于多表联查</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">isimage</strong>：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">true</code>,查询的是<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">imageurl</code>不为空的字段</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">istop</strong>：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">true</code>,文章置顶</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">isrecommend</strong>：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">true</code>,推荐文章</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">iscolor</strong>：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">true</code>,醒目文章</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">ishot</strong>：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">true</code>,热门文章</li>
+</ul>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">示例：(对需要进一步处理的title字段，使用<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">&lt;yl:content&gt;</code>标签做了stripslashes处理，其余的字段直接使用短标签)</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:contents</span> <span style="color: #F92672;">order</span>=<span style="color: #a6e22e;">&quot;updatetime&quot;</span> <span style="color: #F92672;">isImage</span>=<span style="color: #a6e22e;">&quot;true&quot;</span> <span style="color: #F92672;">scope</span>=<span style="color: #a6e22e;">&quot;all&quot;</span> <span style="color: #F92672;">where</span>=<span style="color: #a6e22e;">&quot;url='' and id&lt;&gt;{Content.id}&quot;</span> <span style="color: #F92672;">limit</span>=<span style="color: #a6e22e;">&quot;4&quot;</span> &gt;</span>
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">div</span> <span style="color: #F92672;">class</span>=<span style="color: #a6e22e;">&quot;media&quot;</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:a</span> <span style="color: #F92672;">class</span>=<span style="color: #a6e22e;">&quot;media-pic&quot;</span> <span style="color: #F92672;">target</span>=<span style="color: #a6e22e;">&quot;_blank&quot;</span> <span style="color: #F92672;">title</span>=<span style="color: #a6e22e;">&quot;{Content.title}&quot;</span>&gt;</span>
+            <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:image</span> <span style="color: #F92672;">alt</span>=<span style="color: #a6e22e;">&quot;{Content.title}&quot;</span> <span style="color: #F92672;">src</span>=<span style="color: #a6e22e;">&quot;{Content.imageurl}&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:image</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:a</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:a</span> <span style="color: #F92672;">target</span>=<span style="color: #a6e22e;">&quot;_blank&quot;</span> <span style="color: #F92672;">class</span>=<span style="color: #a6e22e;">&quot;media-txt&quot;</span> <span style="color: #F92672;">title</span>=<span style="color: #a6e22e;">&quot;{Content.title}&quot;</span>&gt;</span>
+            <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">i</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">i</span>&gt;</span><span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">span</span>&gt;</span><span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:content</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;title&quot;</span> <span style="color: #F92672;">stripslashes</span>=<span style="color: #a6e22e;">&quot;true&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:content</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">span</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:a</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">div</span>&gt;</span>
+<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:contents</span>&gt;</span>
+</code></pre>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-public-sqlcontents">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">sqlContents文章列表标签</code></strong>：自己编写sql语句查询文章列表，满足更加灵活的需求，需要有一定的数据库知识,可以嵌套<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:if&gt;</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:sqlContent&gt;</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:image&gt;</code>标签，如果不用对查询的字段值做进一步处理，则推荐使用局部短标签<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">{Sql.字段名}</code>，其中<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">字段名</code>是指<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:queryString&gt;</code>中的sql语句查询的字段，否则推荐使用<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:sqlContent&gt;</code>标签对取出的字段做进一步的处理。</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:sqlContents</span> <span style="color: #F92672;">stripslashes</span>=<span style="color: #a6e22e;">&quot;true&quot;</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:queryString</span>&gt;</span>
+        //sql语句
+    <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:queryString</span>&gt;</span>
+    //其它标签写在这
+<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:sqlContents</span>&gt;</span>
+</code></pre>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">属性：</p>
+<ul style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;"><strong style="font-weight: bold; margin-top: 0px;">stripslashes</strong>：返回一个去除转义反斜线后的字符串（\' 转换为 ' 等等）。双反斜线（\）被转换为单个反斜线（\）。 </li>
+</ul>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">示例：</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:sqlContents</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:queryString</span>&gt;</span>    
+        SELECT * from yl_cms_article where id={Content.id}
+        <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:queryString</span>&gt;</span> 
+        {Sql.ChannelUrl}
+        <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:sqlContent</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;content&quot;</span> <span style="color: #F92672;">stripslashes</span>=<span style="color: #a6e22e;">&quot;true&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:sqlContent</span>&gt;</span>
+<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:sqlContents</span>&gt;</span>
+</code></pre>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-public-sqlcontent">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">sqlContent标签</code></strong>：<br/>使用方式：</p>
+<ol style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;">嵌套在<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">&lt;yl:sqlContents&gt;</code>标签中使用，可以对上一级查询出的数据进行进一步的处理，<br/>属性：<ul style="margin-top: 0; margin-bottom: 0; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;"><strong style="font-weight: bold; margin-top: 0px;">type</strong>：待处理的字段名</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">wordNum</strong>：最多多少个字，多出的截断</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">ellipsis</strong>：截断后加上的默认字符串，默认为<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">...</code></li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">isClearTags</strong>：从字符串中去除 HTML 和 PHP 标记 </li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">stripslashes</strong>：返回一个去除转义反斜线后的字符串（\' 转换为 ' 等等）。双反斜线（\）被转换为单个反斜线（\）。 </li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">formatString</strong>：格式化一个时间日期，如：2014-09-30</li>
+</ul>
+</li>
+<li style="line-height: 1.6;">单独使用，将sql语句写入到<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">querystring</code>属性中，只能查询第一条文章的第一个字段的信息，如：</li>
+</ol>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:sqlContent</span> <span style="color: #F92672;">queryString</span>=<span style="color: #a6e22e;">&quot;sql语句&quot;</span> <span style="color: #F92672;">stripslashes</span>=<span style="color: #a6e22e;">&quot;true&quot;</span>&gt;</span>
+
+<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:sqlContent</span>&gt;</span>
+</code></pre>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-public-site">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">站点标签</code></strong>：可以嵌套<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:channels&gt;</code>、<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:contents&gt;</code>、<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:a&gt;</code>、<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:ad&gt;</code>标签</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:site</span> <span style="color: #F92672;">siteName</span>=<span style="color: #a6e22e;">&quot;网站名&quot;</span> <span style="color: #F92672;">field</span>=<span style="color: #a6e22e;">&quot;字段名&quot;</span>&gt;</span>
+
+<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:site</span>&gt;</span>
+</code></pre>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">属性：（二选一）</p>
+<ul style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;"><strong style="font-weight: bold; margin-top: 0px;">siteName</strong>：站点名称（当有多个站点时，可以指定站点名称）[选填]</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">field</strong>：字段名，默认为当前站点的<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">domian</code>字段</li>
+</ul>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">示例：(页尾单独划分为一个子站点，生成页面尾部)</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:site</span> <span style="color: #F92672;">siteName</span>=<span style="color: #a6e22e;">&quot;关于&quot;</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:a</span> <span style="color: #F92672;">channelname</span>=<span style="color: #a6e22e;">&quot;爱吧网介绍&quot;</span> <span style="color: #F92672;">target</span>=<span style="color: #a6e22e;">&quot;_blank&quot;</span> &gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:a</span>&gt;</span> |
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:a</span> <span style="color: #F92672;">channelname</span>=<span style="color: #a6e22e;">&quot;服务条款&quot;</span> <span style="color: #F92672;">target</span>=<span style="color: #a6e22e;">&quot;_blank&quot;</span> &gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:a</span>&gt;</span> |
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:a</span> <span style="color: #F92672;">channelname</span>=<span style="color: #a6e22e;">&quot;隐私声明&quot;</span> <span style="color: #F92672;">target</span>=<span style="color: #a6e22e;">&quot;_blank&quot;</span> &gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:a</span>&gt;</span> |
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:a</span> <span style="color: #F92672;">channelname</span>=<span style="color: #a6e22e;">&quot;合作伙伴&quot;</span> <span style="color: #F92672;">target</span>=<span style="color: #a6e22e;">&quot;_blank&quot;</span> &gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:a</span>&gt;</span> |
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:a</span> <span style="color: #F92672;">channelname</span>=<span style="color: #a6e22e;">&quot;网站地图&quot;</span> <span style="color: #F92672;">target</span>=<span style="color: #a6e22e;">&quot;_blank&quot;</span> &gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:a</span>&gt;</span> |
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:a</span> <span style="color: #F92672;">channelname</span>=<span style="color: #a6e22e;">&quot;联系爱吧&quot;</span> <span style="color: #F92672;">target</span>=<span style="color: #a6e22e;">&quot;_blank&quot;</span> &gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:a</span>&gt;</span>
+<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:site</span>&gt;</span>
+</code></pre>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-public-channels">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">栏目列表标签</code></strong>：查询指定条件下的栏目，可以嵌套<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:if&gt;</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:contents&gt;</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:a&gt;</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:image&gt;</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:count&gt;</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:channel&gt;</code>标签，当需要对取得的栏目字段信息做进一步处理的话，请使用<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:channel&gt;</code>标签，否则的话，推荐您使用局部短标签<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">{Channel.字段名}</code>。字段名有<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">imageurl</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">id</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">cname</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">content</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">keywords</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">description</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">pid</code>。</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:channels</span> <span style="color: #F92672;">isImage</span>=<span style="color: #a6e22e;">&quot;true&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:channels</span>&gt;</span>
+</code></pre>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">属性：</p>
+<ul style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;"><strong style="font-weight: bold; margin-top: 0px;">channelname</strong>：栏目名，指定栏目</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">upLevel</strong>：0：查找当前栏目；1：从当前栏目的父栏目查找起</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">scope</strong>：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">all</code>，查询的范围包括子栏目</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">isImage</strong>：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">true</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">imageurl</code>不为空，栏目图片地址存在</li>
+</ul>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">示例：</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:channels</span> <span style="color: #F92672;">scope</span>=<span style="color: #a6e22e;">&quot;all&quot;</span> <span style="color: #F92672;">isImage</span>=<span style="color: #a6e22e;">&quot;true&quot;</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">li</span>&gt;</span>
+        栏目名：{Channel.cname}
+        时间：<span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:channel</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;updatetime&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:channel</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">li</span>&gt;</span>
+<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">channels</span>&gt;</span>
+</code></pre>
+<h2 style="font-family: inherit; font-weight: bold; line-height: 1.1; color: inherit; margin-top: 30px; margin-bottom: 20px; font-size: 30px;">-------------------------------------------------</h2>
+</div>
+</div>
+<!-- 公用模板end -->
+<!-- 内容模板start -->
+<div id="tag-content">
+<h4 style="font-family: inherit; font-weight: bold; line-height: 1.1; color: inherit; margin-top: 25px; margin-bottom: 15px; font-size: 18px;">内容模板</h4>
+<div id="tag-content-global">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">内容页全局短标签</code></strong> ： 以<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">{Content.字段}</code>，其中<strong style="font-weight: bold;">字段</strong>是和数据库中的内容表中的字段相对应的（如：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">{Content.title}</code>将被替换成标题信息）。具体参见下表：</p>
+<table style="border-collapse: collapse; border-spacing: 0; margin-bottom: 20px;">
+<thead style="margin-top: 0px;">
+<tr style="margin-top: 0px;">
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;">短标签</th>
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">字段名</th>
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">含义</th>
+<th style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></th>
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">短标签</th>
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">字段名</th>
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr style="margin-top: 0px;">
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.id}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">id</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">内容ID</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.readpoint}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">readpoint</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">文章点击量</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.siteid}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">siteid</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">站点ID</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.keywords}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">keywords</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">关键字</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.cid}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">cid</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">栏目ID</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.description}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">description</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">文章描述</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.classid}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">classid</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">分类ID</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.readpoint}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">readpoint</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">文章点击量</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.title}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">title</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">内容主标题</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.create_uid}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">create_uid</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">文章发布者ID</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.subtitle}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">subtitle</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">内容副标题</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.create_uname}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">create_uname</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">文章发布者</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.author}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">author</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">文章作者</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.update_uid}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">update_uid</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">修改人ID</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.source}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">source</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">文章来源</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.update_uname}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">update_uname</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">修改人</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.summary}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">summary</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">内容简介</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.comment_count}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">comment_count</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">文章评论数</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Content.content}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">content</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">文章内容</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"></td>
+</tr>
+</tbody>
+</table>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-content-if">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">IF标签</code>：在内容页中，if标签可以不用嵌套直接使用，也可以嵌套在<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:contents&gt;</code>、<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:related&gt;</code>、<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:sqlContents&gt;</code>标签中使用,配合<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:successTemplate&gt;</code>和<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:failureTemplate&gt;</code>一起使用；if标签可以嵌套任何的标签。</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:if</span> <span style="color: #F92672;">testType</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">testOperate</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">testValue</span>=<span style="color: #a6e22e;">&quot;&quot;</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:successTemplate</span>&gt;</span>
+        //if条件成立时替换的内容
+    <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:successTemplate</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:failureTemplate</span>&gt;</span>
+        //if条件不成立时替换的内容
+    <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:failureTemplate</span>&gt;</span>
+<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:if</span>&gt;</span>
+</code></pre>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">属性：</p>
+<ul style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;"><strong style="font-weight: bold; margin-top: 0px;">testType</strong>：判断的字段</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">testOperate</strong>：操作类型<ul style="margin-top: 0; margin-bottom: 0; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;">in：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">testType</code>字段值是否包含<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">testValue</code></li>
+<li style="line-height: 1.6;">equals：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">testType</code>字段值是否等于<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">testValue</code></li>
+<li style="line-height: 1.6;">notempty：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">testType</code>字段值是否为空</li>
+</ul>
+</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">testValue</strong>：多个用<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">','</code>隔开</li>
+</ul>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-content-content">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">内容标签</code></strong> ：&lt;yl:content&gt;&lt;/yl:content&gt; 通过给定相应的属性值获取特定格式的内容字段值。如，获取内容表中的内容字段的值，并且做相应的处理，也可以配合<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:if&gt;</code>、<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:successTemplate&gt;</code>、<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:failureTemplate&gt;</code>标签使用，代码如下：</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:content</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;content&quot;</span> <span style="color: #F92672;">stripslashes</span>=<span style="color: #a6e22e;">&quot;true&quot;</span>  <span style="color: #F92672;">replaceKeyword</span>=<span style="color: #a6e22e;">&quot;true&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:content</span>&gt;</span>
+</code></pre>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">属性：</p>
+<ul style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;"><strong style="font-weight: bold; margin-top: 0px;">type</strong>：要处理的字段名，默认为<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">title</code><ul style="margin-top: 0; margin-bottom: 0; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;">tags:特殊处理</li>
+</ul>
+</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">isClearTags</strong>：从字符串中去除 HTML 和 PHP 标记 </li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">stripslashes</strong>：返回一个去除转义反斜线后的字符串（\' 转换为 ' 等等）。双反斜线（\）被转换为单个反斜线（\）。 </li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">wordNum</strong>：得到的结果的最大长度，超过部分将被截断</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">ellipsis</strong>：截断后的字符串后面加上的字符，默认为<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">...</code></li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">formatString</strong>：格式化一个时间日期字符串，格式化后的格式如：2014-09-30</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">wipeHtml</strong>：去除html标签（包括去除script标签以及script标签中的内容）</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">replaceKeyword</strong>：是否替换关键字（关键字在CMS后台添加）</li>
+</ul>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">示例：（如果summary不为空，则执行标签if中的其他内容）</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:if</span> <span style="color: #F92672;">testType</span>=<span style="color: #a6e22e;">&quot;summary&quot;</span> <span style="color: #F92672;">testOperate</span>=<span style="color: #a6e22e;">&quot;NotEmpty&quot;</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:successTemplate</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">div</span> <span style="color: #F92672;">class</span>=<span style="color: #a6e22e;">&quot;entry-intro&quot;</span>&gt;</span>
+            <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">p</span>&gt;</span><span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">strong</span>&gt;</span>导读<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">strong</span>&gt;</span><span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:content</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;summary&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:content</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">p</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">div</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:successTemplate</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:failureTemplate</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:failureTemplate</span>&gt;</span>
+<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:if</span>&gt;</span>
+</code></pre>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-content-comments">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">评论标签</code></strong>:<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:comments&gt;&lt;/yl:comments&gt;</code>，其中可以嵌套<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:comment type=&quot;username|ip|datetime|content|id&quot;&gt;&lt;/yl:comment&gt;</code>标签（通过type属性可以取出评论表中对应字段的信息），也可以用<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">评论标签内短标签</code>，短标签规则如下：</p>
+<table style="border-collapse: collapse; border-spacing: 0; margin-bottom: 20px;">
+<thead style="margin-top: 0px;">
+<tr style="margin-top: 0px;">
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;">短标签</th>
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">字段名</th>
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr style="margin-top: 0px;">
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Comment.id}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">id</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">评论ID</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Comment.author}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">author</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">评论人</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Comment.author_ip}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">author_ip</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">评论者的IP</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Comment.content}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">content</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">评论内容</td>
+</tr>
+</tbody>
+</table>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">示例：</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:comments</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">li</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">a</span> <span style="color: #F92672;">href</span>=<span style="color: #a6e22e;">&quot;http://www.i8i8i8.com/space/{Comment.id}.html&quot;</span> <span style="color: #F92672;">target</span>=<span style="color: #a6e22e;">&quot;_blank&quot;</span>&gt;</span>{Comment.author}<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">a</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:comment</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;content&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:comment</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">li</span>&gt;</span>
+<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:comments</span>&gt;</span>
+</code></pre>
+<h2 style="font-family: inherit; font-weight: bold; line-height: 1.1; color: inherit; margin-top: 30px; margin-bottom: 20px; font-size: 30px;">--------------------------------------------------------------</h2>
+</div>
+</div>
+<!-- 内容模板end -->
+<!-- 栏目模板start -->
+<div id="tag-channel">
+<h4 style="font-family: inherit; font-weight: bold; line-height: 1.1; color: inherit; margin-top: 25px; margin-bottom: 15px; font-size: 18px;">栏目模板</h4>
+<div id="tag-channel-global">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">栏目页全局标签</code></strong>:以<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">{Channel.字段}</code>，其中字段是和数据库中的内容表中的字段相对应的（如：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">{Channel.cname}</code>将被替换成栏目名）。具体参见下表：</p>
+<table style="border-collapse: collapse; border-spacing: 0; margin-bottom: 20px;">
+<thead style="margin-top: 0px;">
+<tr style="margin-top: 0px;">
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;">短标签</th>
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">字段名</th>
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">含义</th>
+<th style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></th>
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">短标签</th>
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">字段名</th>
+<th style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr style="margin-top: 0px;">
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Channel.id}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">id</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">栏目ID</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Channel.siteid}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">siteid</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">站点ID</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Channel.pid}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">pid</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">栏目父ID</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Channel.cname}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">cname</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">栏目名</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Channel.url}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">url</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">栏目外链</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Channel.imageurl}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">imageurl</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">栏目图片地址</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Channel.keywords}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">keywords</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">栏目关键字</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Channel.description}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">description</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">栏目描述</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Channel.content}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">content</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">栏目内容</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Channel.create_uid}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">create_uid</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">栏目创建人ID</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Channel.pagetitle}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">pagetitle</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Channel.create_uname}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">create_uname</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">栏目创建人名字</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Channel.pagedescription}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">pagedescription</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Channel.update_uid}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">update_uid</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">修改人ID</td>
+</tr>
+<tr>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Channel.update_uname}</code></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">update_uname</td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;">修改人</td>
+<td style="padding: 8px; line-height: 20px; text-align: left; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"></td>
+<td style="text-align: center; padding: 8px; line-height: 20px; vertical-align: top; border: 1px solid #DDD;"></td>
+</tr>
+</tbody>
+</table>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-channel-channel">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">获取栏目信息标签</code></strong>：在栏目模板中可以不用嵌套在其它标签中，直接使用。</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:channel</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;cname&quot;</span> &gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:channel</span>&gt;</span>
+</code></pre>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">属性：</p>
+<ul style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;"><strong style="font-weight: bold; margin-top: 0px;">channelname</strong>：栏目名，指定栏目</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">type</strong>：字段名<ul style="margin-top: 0; margin-bottom: 0; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;">CountOfContents：该栏目下有多少篇文章</li>
+<li style="line-height: 1.6;">其它(栏目表中的字段)，默认为<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">cname</code>,有<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">cateurl</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">imageurl</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">id</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">plistid</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">cname</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">content</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">keywords</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">description</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">catetemplate</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">arttemplate</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">createurl</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">catenaming</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">artnaming</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">pagetitle</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">pagedescription</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">inputtime</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">updatetime</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">content_num</code>,<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">pid</code></li>
+</ul>
+</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">isClearTags</strong>：从字符串中去除 HTML 和 PHP 标记 </li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">formatString</strong>：格式化一个时间日期字符串，默认为<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">Y-m-d</code>,格式化后的格式如：2014-09-30</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">wordNum</strong>：得到的结果的最大长度，超过部分将被截断</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">alt</strong>：img标签的alt属性</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">title</strong>：img标签的title属性</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">class</strong>：img标签的样式</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">style</strong>：img标签的行内样式</li>
+</ul>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-channel-pagecontents">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">分页栏列表标签</code></strong>：可以生成分页的栏目页,可以嵌套<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:if&gt;</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:a&gt;</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:image&gt;</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:count&gt;</code>，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:content&gt;</code>标签,如果不需要对取得的结果进一步处理，直接使用局部短标签<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">{Content.字段名}</code>，如果需要处理，请使用<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">&lt;yl:content&gt;</code>标签进行进一步的处理。</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:pagecontents</span> <span style="color: #F92672;">scope</span>=<span style="color: #a6e22e;">&quot;all&quot;</span> <span style="color: #F92672;">pagesize</span>=<span style="color: #a6e22e;">&quot;20&quot;</span> &gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:pagecontents</span>&gt;</span>
+</code></pre>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">属性：</p>
+<ul style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;"><strong style="font-weight: bold; margin-top: 0px;">channelname</strong>：栏目名，如果写，则不再以当前栏目为基准，指定某个栏目</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">groupchannel</strong>：分组栏目名</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">pagesize</strong>：每页显示多少条</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">scope</strong>：<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">all</code>,包括所有子栏目</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">order</strong>：默认为<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">updatetime desc</code>，按更新时间降序排列</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">where</strong>：sql的where条件</li>
+</ul>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">示例：</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:pageContents</span> <span style="color: #F92672;">scope</span>=<span style="color: #a6e22e;">&quot;all&quot;</span> <span style="color: #F92672;">pagesize</span>=<span style="color: #a6e22e;">&quot;12&quot;</span> <span style="color: #F92672;">order</span>=<span style="color: #a6e22e;">&quot;updatetime&quot;</span> <span style="color: #F92672;">layout</span>=<span style="color: #a6e22e;">&quot;None&quot;</span> <span style="color: #F92672;">where</span>=<span style="color: #a6e22e;">&quot;&quot;</span> <span style="color: #F92672;">groupchannel</span>=<span style="color: #a6e22e;">&quot;{Channel.cname}&quot;</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">h3</span> <span style="color: #F92672;">class</span>=<span style="color: #a6e22e;">&quot;title&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:a</span> <span style="color: #F92672;">target</span>=<span style="color: #a6e22e;">&quot;_blank&quot;</span> <span style="color: #F92672;">title</span>=<span style="color: #a6e22e;">&quot;{Content.title}&quot;</span>&gt;</span>{Content.title}<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:a</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">h3</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">div</span> <span style="color: #F92672;">class</span>=<span style="color: #a6e22e;">&quot;meta&quot;</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">span</span>&gt;</span>
+          <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">label</span>&gt;</span>日期：<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">label</span>&gt;</span>
+          <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:content</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;updatetime&quot;</span> <span style="color: #F92672;">formatString</span>=<span style="color: #a6e22e;">&quot;Y年m月d日&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:content</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">span</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">span</span> <span style="color: #F92672;">class</span>=<span style="color: #a6e22e;">&quot;comment-num&quot;</span>&gt;</span>
+           <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:content</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;comment_count&quot;</span> &gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:content</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">span</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">div</span>&gt;</span>
+<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:pageContents</span>&gt;</span>
+</code></pre>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+<div id="tag-channel-pageitems">
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;"><strong style="font-weight: bold; margin-top: 0px;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">页码标签</code></strong>：</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:pageItems</span>&gt;</span>
+
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:pageItem</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;FirstPage&quot;</span>&gt;</span>
+
+<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:pageItems</span>&gt;</span>
+</code></pre>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">其中<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">{Current.Url}</code>：生成页码的链接，<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">{Current.Num}</code>:页码<br/>属性：</p>
+<ul style="margin-top: 0; margin-bottom: 10px; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;"><strong style="font-weight: bold; margin-top: 0px;">type</strong>：<ul style="margin-top: 0; margin-bottom: 0; line-height: 1.6;">
+<li style="line-height: 1.6; margin-top: 0px;">FirstPage:首页，默认<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">text</code>为<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">首页</code></li>
+<li style="line-height: 1.6;">totalnum：总共xx条数据</li>
+<li style="line-height: 1.6;">previouspage：上一页，默认<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">text</code>为<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">上一页</code></li>
+<li style="line-height: 1.6;">nextpage:下一页，默认<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">text</code>为<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">下一页</code></li>
+<li style="line-height: 1.6;">lastpage：末页，默认<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">text</code>为<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">最后一页</code></li>
+<li style="line-height: 1.6;">currentpageindex：当前页，默认<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">text</code>为<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">当前页：</code></li>
+<li style="line-height: 1.6;">jumppage：跳转到xx页，默认<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px; margin-top: 0px;">text</code>为<code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 90%; padding: 2px 4px; color: #c7254e; background-color: #f9f2f4; white-space: nowrap; border-radius: 4px;">跳转到</code></li>
+<li style="line-height: 1.6;">totalpagenum：总页数</li>
+</ul>
+</li>
+<li style="line-height: 1.6;"><strong style="font-weight: bold; margin-top: 0px;">text</strong>：显示的文本</li>
+</ul>
+<p style="margin: 0 0 10px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">示例:</p>
+<pre style="overflow: initial; font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: 14px; display: block; padding: 0; margin: 0 0 10px; line-height: 1.6; word-break: break-all; word-wrap: break-word; color: #333333; background-color: #f5f5f5; border: none; border-radius: 0; white-space: pre-wrap;"><code style="font-family: Menlo, Monaco, Consolas, Courier New, monospace; font-size: inherit; padding: 1em; color: #f8f8f2; background-color: transparent; white-space: pre-wrap; border-radius: 0; display: block; background: #23241f; margin-top: 0px;"><span style="color: #f8f8f2; margin-top: 0px;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:pageItems</span>&gt;</span>
+    <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">div</span> <span style="color: #F92672;">class</span>=<span style="color: #a6e22e;">&quot;pagination&quot;</span> <span style="color: #F92672;">role</span>=<span style="color: #a6e22e;">&quot;pagination&quot;</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:pageItem</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;FirstPage&quot;</span> <span style="color: #F92672;">text</span>=<span style="color: #a6e22e;">&quot;首&amp;nbsp;&amp;nbsp;页&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:pageItem</span>&gt;</span> 
+        <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:pageItem</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;PreviousPage&quot;</span> <span style="color: #F92672;">text</span>=<span style="color: #a6e22e;">&quot;&amp;lt;&quot;</span> &gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:pageItem</span>&gt;</span> 
+        <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:pageItem</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;PageNavigation&quot;</span>&gt;</span>
+            <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:successTemplate</span>&gt;</span>
+                <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">span</span>&gt;</span><span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">a</span> <span style="color: #F92672;">href</span>=<span style="color: #a6e22e;">&quot;{Current.Url}&quot;</span>&gt;</span>{Current.Num}<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">a</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">span</span>&gt;</span>
+            <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:successTemplate</span>&gt;</span> 
+            <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:failureTemplate</span>&gt;</span>
+                <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">span</span> <span style="color: #F92672;">class</span>=<span style="color: #a6e22e;">&quot;active&quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">a</span> <span style="color: #F92672;">href</span>=<span style="color: #a6e22e;">&quot;javascript:;&quot;</span>&gt;</span>{Current.Num}<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">a</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">span</span>&gt;</span>
+            <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:failureTemplate</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:pageItem</span>&gt;</span>
+        <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:pageItem</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;nextpage&quot;</span> <span style="color: #F92672;">text</span>=<span style="color: #a6e22e;">&quot;&amp;gt &quot;</span>&gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:pageItem</span>&gt;</span> 
+        <span style="color: #f8f8f2;">&lt;<span style="color: #F92672; margin-top: 0px;">yl:pageItem</span> <span style="color: #F92672;">type</span>=<span style="color: #a6e22e;">&quot;LastPage&quot;</span> <span style="color: #F92672;">text</span>=<span style="color: #a6e22e;">&quot;末&amp;nbsp;&amp;nbsp;页&quot;</span> &gt;</span><span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:pageItem</span>&gt;</span> 
+    <span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">div</span>&gt;</span>
+<span style="color: #f8f8f2;">&lt;/<span style="color: #F92672; margin-top: 0px;">yl:pageItems</span>&gt;</span>
+</code></pre>
+<hr style="-moz-box-sizing: content-box; box-sizing: content-box; height: 0; line-height: 1.6; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid rgba(102, 128, 153, 0.15);"/>
+</div>
+</div></div>
+          </div>
+        </div>
+        <!-- 栏目模板end -->
+<!-- document end -->
+        <div class="col-md-3">
+          <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top" role="complementary">
+            <ul class="nav bs-docs-sidenav">
+              <li>
+                <a href="#summary">标签简介</a>
+                <ul class="nav">
+                  <li><a href="#summary">简介</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#details">标签详解</a>
+                <ul class="nav">
+                  <li><a href="#details">标签详解</a></li>
+                </ul>
+              </li>
+              <li class="">
+                <a href="#tag-public">公用模板标签</a>
+                <ul class="nav">
+                  <li><a href="#tag-public-global">公用全局标签</a></li>
+                  <li><a href="#tag-public-include">引入文件标签</a></li>
+                  <li><a href="#tag-public-location">导航条标签</a></li>
+                  <li><a href="#tag-public-navigation">“上一篇，下一篇”标签</a></li>
+                  <li><a href="#tag-public-block">区块标签</a></li>
+                  <li><a href="#tag-public-adv">广告标签</a></li>
+                  <li><a href="#tag-public-image">图片标签</a></li>
+                  <li><a href="#tag-public-a">a标签</a></li>
+                  <li><a href="#tag-public-contents">contents文章列表标签</a></li>
+                  <li><a href="#tag-public-sqlcontents">sqlContents文章列表标签</a></li>
+                  <li><a href="#tag-public-sqlcontent">sqlContent标签</a></li>
+                  <li><a href="#tag-public-site">站点标签</a></li>
+                  <li><a href="#tag-public-channels">栏目列表标签</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#tag-content">内容模板标签</a>
+                <ul class="nav">
+                  <li><a href="#tag-content-global">内容页全局短标签</a></li>
+                  <li><a href="#tag-content-if">if标签</a></li>
+                  <li><a href="#tag-content-content">内容标签</a></li>
+                  <li><a href="#tag-content-comments">评论标签</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#tag-channel">栏目模板标签</a>
+                <ul class="nav">
+                  <li><a href="#tag-channel-global">栏目页全局标签</a></li>
+                  <li><a href="#tag-channel-channel">获取栏目信息标签</a></li>
+                  <li><a href="#tag-channel-pagecontents">分页栏列表标签</a></li>
+                  <li><a href="#tag-channel-pageitems">页码标签</a></li>
+                </ul>
+              </li>
+            </ul>
+            <a class="back-to-top" href="#top">
+              返回顶部
+            </a>  
+          </div>
+        </div>
+        </div>
+        <div class="footer">
+            <p class="text-center"><small>深圳市涌浪网络技术有限公司 版权所有<br />copyright © 2008 - 2013.<br /> <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备10042637号</a><small></p>
+        </div>
+      </div>
+  </body>
+  <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+  <script src="Public/js/bootstrap.min.js"></script>
+  <script src="Public/js/document.min.js"></script>
+</html>
