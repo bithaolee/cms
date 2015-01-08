@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+  <head>
+    <title>OceanxCMS,为您的网站私人订制</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Bootstrap -->
+    <link href="Public/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="Public/css/test.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <!-- 模态框start -->
+    <div class="modal fade" id="modal-confirm" role="dialog" aria-describedby="弹出式确认对话框" aria-labelledby="modalTitle">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">close</span></button>
+            <h4 class="modal-title" id="modalTitle">模态框头部</h4>
+          </div>
+          <div class="modal-body">
+            <p>要显示的内容信息等</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-default btn-lg">确定</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 模态框end -->
+  	<div class="container-fluid">
+  		<div class="row">
+  			<div class="col-md-3">
+  				<!-- 列表组 -->
+  				<ul class="list-group">
+  					<li class="list-group-item active">按钮组</li>
+  					<li class="list-group-item list-group-item-success">成功<span class="badge">100</span></li>
+  					<li class="list-group-item list-group-item-info">信息<span class="glyphicon glyphicon-hand-right"></span></li>
+  					<li class="list-group-item list-group-item-warning">警告</li>
+  					<li class="list-group-item list-group-item-danger">危险</li>
+  				</ul>
+  				<div class="list-group">
+  					<a class="list-group-item disabled">div、a列表组</a>
+  					<a href="http://www.oceanx.cn/" class="list-group-item active">
+  						<h4 class="list-group-item-heading">标题</h4>
+  						<p class="list-group-item-text">this is a test text</p>
+  					</a>
+  				</div>
+
+  				<!-- 面板 -->
+  				<div class="panel panel-danger">
+  					<div class="panel-heading">
+  						<h4 class="panel-title">这是标题</h4>
+  					</div>
+  					<div class="panel-body">
+  						这是面板的主要内容
+  					</div>
+  					<div class="panel-footer">
+  						这是面板的注脚
+  					</div>
+  				</div>
+  				<!-- 表格面板 -->
+  				<div class="panel panel-default">
+  					<div class="panel-heading">
+  						<h3 class="panel-title">带表格面板的标题</h3>
+  					</div>
+  					<div class="panel-body">
+  						这是带表格面板的主体部分
+  					</div>
+  					<table class="table">
+  						<tr>
+  							<th>序号</th><th>姓名</th><th>年龄</th>
+							</tr>
+							<tr>
+								<td>1</td><td>tony</td><td>25</td>
+							</tr>
+  					</table>
+  				</div>
+  				<!-- 带列表组的面板 -->
+  				<div class="panel panel-default">
+  					<div class="panel-heading">
+  						<h3 class="panel-title">带列表组面板的标题</h3>
+  					</div>
+  					<div class="panel-body">
+  						这是带列表组面板的主体部分
+  					</div>
+  					<div class="list-group">
+  						<a class="list-group-item list-group-item-success">成功了</a>
+  						<a class="list-group-item list-group-item-danger">失败了</a>
+  					</div>
+  				</div>
+  				<!-- label -->
+  				<span class="label label-success">成功了吗</span>
+  				<code>php代码</code>
+          <!-- 警告框 -->
+          <!-- alert-dismissible 可关闭的 -->
+          <div class="alert alert-danger alert-dismissible fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">close</span></button>
+            <strong>警告！警告！！</strong>再不处理就晚了~~
+          </div>
+
+          <div id="myAlert" class="alert alert-info alert-dismissible fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">close</span></button>
+            <strong>警告！警告！！</strong>再不处理就晚了~~
+          </div>
+
+
+    		</div>
+
+        <div class="col-md-9">
+          <noscript>您的浏览器未打开js，可能会对您浏览我们的网页造成影响！</noscript>
+          <h1 class="page-header">模态框</h1>
+          <button type="button" class="btn btn-primary" data-target="#modal-confirm" data-toggle="modal" data-backdrop="true" data-show="true" data-keyboard="true" id="modalBtn">点击弹出确认提示框！</button>
+          <h1 class="page-header">下拉框</h1>
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown trigger
+             <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+              <li role="presentation" class="dropdown-header">菜单</li>
+              <li role="presentation" class="divider"></li>
+              <li role="presentation"><a role="menuitem">菜单二</a></li>
+            </ul>
+          </div>
+          <br />
+          <div class="dropdown">
+            <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown trigger
+              <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+              <li role="presentation" class="dropdown-header">菜单</li>
+              <li role="presentation" class="divider"></li>
+              <li role="presentation"><a role="menuitem">菜单二</a></li>
+            </ul>
+          </div>
+
+          <h1 class="page-header">滚动监听</h1>
+          <div>
+            <ul class="nav nav-tabs">
+              <li role="presentation" class="active"><a>第一页</a></li>
+              <li role="presentation"><a>第二页</a></li>
+              <li role="presentation">
+                <a id="nav3" data-target="#" href="http://www.oceanx.cn/" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">第三页<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="nav3">
+                  <li role="presentation" class="dropdown-header">子栏目</li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a>子菜单一</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <br />
+
+          <!-- 可折叠面板 -->
+          <h1 class="page-header">可折叠面板</h1>
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-primary">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Collapsible Group Item #1
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-success">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Collapsible Group Item #2
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-danger">
+              <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                  <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Collapsible Group Item #3
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+  	</div>
+  </body>
+  <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="Public/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    var btnAlert = $("#myAlert");
+    btnAlert.on('close.bs.alert',function(e){
+      if(!confirm("确认关闭吗？")){
+        e.preventDefault();
+      }
+    }).on('closed.bs.alert',function(e){
+      alert("重新显示回来");
+      //通过js触发事件发生
+      // btnAlert.alert('close');
+      btnAlert.alert();
+    });
+
+    /*弹出确认对话框*/
+    var modalConfirm = $("#modal-confirm");
+    //js控制打开的对话框
+    // modalConfirm.modal();
+    modalConfirm.on('show.bs.modal', function (e) {
+      // do something...
+      alert("hidden");
+    });
+
+
+    /*可折叠框*/
+    var collapseOne = $("#collapseOne");
+    //     option = {
+    //       'toggle':true
+    //     };
+    // collapse.collapse('hidden');
+    collapseOne.on('show.bs.collapse', function (e){
+      alert('show');
+    });
+  </script>
+  </html>

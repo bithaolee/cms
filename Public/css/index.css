@@ -1,7 +1,19 @@
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;}
 .footer{
 	background-color: #eee;
 	padding: 10px;
 	margin-top: 20px;
+}
+.footer p{
+	color:#969696;
+}
+.footer a{
+	text-decoration: none;
+	color:#969696;
+}
+.footer a:hover{
+	text-decoration: none;
+	color:#000;
 }
 #img{
 	width: 140px;

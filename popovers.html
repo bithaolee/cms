@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+  <head>
+    <title>OceanxCMS,为您的网站私人订制</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Bootstrap -->
+    <link href="Public/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="Public/css/index.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="page-header">弹出框</h2>
+      <button type="button" class="btn btn-success btn-lg" data-toggle="popover" title="congratulation!!" data-content="hello,guy! congratulation that you have pass the end exam on this term~~ good luck!!">click me and show the message on the right</button>
+
+      <h2 class="page-header">按钮</h2>
+      <button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+        Loading state
+      </button>
+      <hr />
+
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active">
+          <input type="checkbox" autocomplete="off" checked> Checkbox 1 (pre-checked)
+        </label>
+        <label class="btn btn-primary">
+          <input type="checkbox" autocomplete="off"> Checkbox 2
+        </label>
+        <label class="btn btn-primary">
+          <input type="checkbox" autocomplete="off"> Checkbox 3
+        </label>
+      </div>
+      <hr />
+
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active">
+          <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+        </label>
+      </div>
+      <hr />
+
+      <button type="button" id="myStateButton" data-complete-text="finished!" class="btn btn-primary" autocomplete="off">
+        ...
+      </button>
+
+      <button id="fat-btn" class="btn btn-primary" data-loading-text="Loading..." 
+   type="button"> 加载状态
+</button>
+
+      
+    </div>
+  </body>
+  <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+  <script src="Public/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+   $(function() { 
+      $("#fat-btn").click(function(){
+         $(this).button('loading').delay(1000).queue(function() {
+            $(this).button('reset');
+         });        
+      });
+   });  
+    function sleep(ms) {
+      var start = new Date();
+      while (new Date() - start <= ms) {}
+    }
+      
+    //tooltip和popover比较耗性能，所有用之前要手动初始化
+    $(function(){
+      $('[data-toggle="popover"]').popover();
+    });
+    //登录中状态
+    $('#myButton').on('click', function () {
+      var $btn = $(this).button('loading');
+      
+      $btn.button('reset')
+    });
+
+    $('#myStateButton').on('click', function () {
+      $(this).button('complete') // button text will be "finished!"
+    });
+  </script>
+</html>
